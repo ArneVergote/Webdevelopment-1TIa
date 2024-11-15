@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opdracht 3</title>
+</head>
+<body>
+
+<section id="vrienden">
+    <h2>Vrienden</h2>
+    <table>
+        <tr>
+            <th>Voornaam</th>
+            <th>Familienaam</th>
+            <th>Postcode</th>
+            <th>Woonplaats</th>
+            <th>E-mailadres</th>
+            <th>Telefoonnummer</th>
+        </tr>
+        <tr>
+            <td>Jan</td>
+            <td>Jansen</td>
+            <td>1011AB</td>
+            <td>Amsterdam</td>
+            <td class="onbekend">Onbekend</td>
+            <td>06-12345678</td>
+        </tr>
+        <tr class="alt">
+            <td>Marie</td>
+            <td>De Vries</td>
+            <td class="onbekend">Onbekend</td>
+            <td>Rotterdam</td>
+            <td>marie.devries@example.com</td>
+            <td>06-23456789</td>
+        </tr>
+        <tr>
+            <td>Pieter</td>
+            <td class="onbekend">Bakker</td>
+            <td>3000EF</td>
+            <td>Den Haag</td>
+            <td>pieter.bakker@example.com</td>
+            <td>06-34567890</td>
+        </tr>
+        <tr class="alt">
+            <td>Lisa</td>
+            <td>Van Dijk</td>
+            <td>4000GH</td>
+            <td class="onbekend">Onbekend</td>
+            <td>lisa.vandijk@example.com</td>
+            <td>06-45678901</td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>Mulder</td>
+            <td>5000IJ</td>
+            <td>Eindhoven</td>
+            <td class="onbekend">Onbekend</td>
+            <td>06-56789012</td>
+        </tr>
+    </table>
+</section>
+<p>Specificiteit is de reden waarom .onbekend { background-color: red; }
+    geen effect heeft op cellen binnen tr.alt. De selector tr.alt td is specifieker en overschrijft de eenvoudiger .onbekend-regel.</p>
+</body>
+</html>
