@@ -39,7 +39,9 @@ footer{
     width: 28.5%;
     float: right;
     padding-left: 20px;
-    background-color: #f4f4f4;
+    padding-right: 20px;
+    text-align: center;
+    border: 2px #4a90e2 solid;
 }
 section {
     width: 66.5%;
@@ -50,8 +52,5 @@ section img{
     float: right;
 }
 footer {
-    position: absolute;
     text-align: center;
-    font-size: 50%;
-    margin-top: auto;
 }
