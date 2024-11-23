@@ -52,5 +52,8 @@ section img{
     float: right;
 }
 footer {
+    font-size: 50%;
     text-align: center;
+    clear: both;
+    margin-top: 20px;
 }
