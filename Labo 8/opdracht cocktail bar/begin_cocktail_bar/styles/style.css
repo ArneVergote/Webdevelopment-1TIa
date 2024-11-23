@@ -1,0 +1,57 @@
+body{
+    font-family: Verdana, Helvetica, Arial, serif;
+    font-size: 1.2em;
+    padding: 0;
+    width: 95%;
+    margin: 0 auto;
+}
+h1, h2{
+    color: RGB(0, 126, 126);
+}
+h1{
+    font-size: 150%;
+}
+h2{
+    font-size: 130%;
+}
+.weekly h1{
+    color: black;
+}
+.weekly h2{
+    color: red;
+}
+footer{
+    font-size: 50%;
+}
+.weekly a:hover{
+    background-color: saddlebrown;
+}
+#guarantee{
+    margin: 30px;
+    padding: 30px 30px 30px 75px;
+    color: rgb(68, 68, 68);
+    background-color: rgb(167, 206, 206);
+    border: 2px dotted white;
+    background-image: url('../images/background.gif');
+    background-repeat: no-repeat;
+}
+.weekly {
+    width: 28.5%;
+    float: right;
+    padding-left: 20px;
+    background-color: #f4f4f4;
+}
+section {
+    width: 66.5%;
+    float: left;
+    padding-right: 20px;
+}
+section img{
+    float: right;
+}
+footer {
+    position: absolute;
+    text-align: center;
+    font-size: 50%;
+    margin-top: auto;
+}
