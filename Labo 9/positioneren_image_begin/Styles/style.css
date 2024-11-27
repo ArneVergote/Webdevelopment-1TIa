@@ -1,0 +1,21 @@
+article{
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+img{
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+article:nth-child(odd) img{
+    float: left;
+}
+article:nth-child(even) img{
+    float: right;
+}
+body{
+    background-color: grey;
+    font-size: 1.25em;
+}
