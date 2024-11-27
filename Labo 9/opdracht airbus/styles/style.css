@@ -10,6 +10,7 @@ header{
     background-size: cover;
     text-align: center;
     color: darkblue;
+    position: relative;
     background-position: center;
 }
 header p:first-child{
