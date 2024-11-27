@@ -48,19 +48,25 @@ aside h3{
 main{
     box-sizing: border-box;
     width: 75%;
-    padding-right: 10px;
+    overflow: hidden;
 }
 article{
     background-color: white;
     color: black;
     text-align: justify;
     margin: 20px 30px 20px 0;
+    overflow: hidden;
 }
 .logo{
     float: left;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
+}
+span{
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
 }
 .foto{
     width: 200px;
