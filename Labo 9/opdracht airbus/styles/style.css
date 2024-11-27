@@ -10,7 +10,7 @@ header{
     background-size: cover;
     text-align: center;
     color: darkblue;
-
+    background-position: center;
 }
 header p:first-child{
     font-size: 300%;
@@ -24,7 +24,7 @@ header p{
     margin-top: 0;
 }
 header img{
-    position: relative;
+    position: absolute;
     right: 250px;
     bottom: 60px;
 }
