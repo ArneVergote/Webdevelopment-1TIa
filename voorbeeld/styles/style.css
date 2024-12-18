@@ -1,0 +1,59 @@
+body {
+    max-width: 95%;
+    margin: auto;
+}
+header {
+    position: relative;
+    height: 300px;
+    background: url('https://via.placeholder.com/1200x300') no-repeat center center;
+    background-size: cover;
+}
+header nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+aside {
+    width: 20%;
+    float: left;
+    background-color: #f8f9fa;
+    height: calc(100vh - 100px); /* Full height except footer */
+    padding: 10px;
+}
+main {
+    width: 75%;
+    float: right;
+    padding: 10px;
+}
+footer {
+    clear: both;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+}
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-columns div {
+    width: 30%;
+}
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.gallery img {
+    width: calc(50% - 10px);
+    height: auto;
+}
