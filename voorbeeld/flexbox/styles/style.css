@@ -1,0 +1,106 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 95%;
+}
+
+/* Header styling */
+header {
+    height: 300px;
+    background: url('../img/boom.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav #navbarNav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Flex container for aside and main */
+.container {
+    display: flex;
+    min-height: calc(100vh - 300px - 100px); /* Full height minus header and footer */
+}
+
+/* Aside styling */
+aside {
+    flex: 0 0 20%; /* Fixed 20% width */
+    background-color: grey;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Main styling */
+main {
+    flex: 0 0 75%; /* Fixed 75% width */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-columns div {
+    width: 30%;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+.table th {
+    background-color: grey;
+}
+
+.table tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+/* Gallery styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}

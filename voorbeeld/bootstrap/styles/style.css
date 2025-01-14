@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    max-width: 95%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light background for better readability */
+    color: #333;
+}
+h1 {
+    font-size: 2.5rem; /* Use relative units for better scalability */
+    text-align: center;
+    color: white;
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    height: 300px;
+    background: url('../img/boom.jpg') no-repeat center center;
+    background-size: cover;
+}
+header nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 10px 0;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 150px; /* Adds spacing between links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+header nav a:hover {
+    text-decoration: underline;
+    color: #ffc107; /* Highlight link on hover */
+}
+
+/* Sidebar Styles */
+aside {
+    background-color: grey;
+    color: white;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+    background-color: white; /* Contrasts with the sidebar */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+section.row {
+    margin-bottom: 20px; /* Adds spacing between sections */
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.table-bordered th, .table-bordered td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+.table thead th {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+.table tbody tr:nth-child(even) {
+    background-color: grey; /* Light grey for even rows */
+}
+.table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Gallery Styles */
+.gallery img {
+    border: 1px solid #ddd; /* Adds border to images */
+    border-radius: 5px; /* Rounds corners slightly */
+    max-width: 200px;
+    height: auto;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both; /* Clear floats so it stays below content */
+    width: 100%; /* Make sure it spans the full width of the page */
+}
+footer .row div {
+    margin-bottom: 20px; /* Adds spacing between footer columns */
+}
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}

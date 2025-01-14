@@ -1,0 +1,119 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer */
+    grid-template-columns: 20% 75%; /* Aside en Main */
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    grid-column: span 2; /* Header over beide kolommen */
+    background: url('../img/boom.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Aside styling */
+aside {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main styling */
+main {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Footer styling */
+footer {
+    grid-column: span 2; /* Footer over beide kolommen */
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: grey;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+/* Gallery styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Drie kolommen */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Eén kolom layout */
+    }
+
+    header, footer {
+        grid-column: span 1; /* Geen spanning nodig in één kolom layout */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen voor de galerij */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Eén kolom voor de galerij */
+    }
+
+    header nav a {
+        font-size: 14px; /* Kleinere lettergrootte voor links */
+    }
+
+    aside, main {
+        padding: 10px; /* Minder padding voor kleine schermen */
+    }
+}
