@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Demonstratie slider</title>
+	<link rel="stylesheet" href="styles/styles.css"/>
+</head> 
+<body> 
+<section>
+	<p>Open het console venster, versleep daarna de slider hieronder en kijk welke berichten er komen</p>
+	<input type="range" class="slider" value="50" min="0" max="100" />
+</section>
+<section>
+<p>Een gekleurd blokje :</p>
+<div class="colorDemo"></div>
+</section>
+<p>Waar wordt de event listener gekoppeld aan de slider?</p>
+<p>De event listener wordt gekoppeld aan de eerste slider (sliders[0])
+	met addEventListener("input", update) en addEventListener("change", update).</p>
+<p>Waarom moeten we die op twee soorten events koppelen?</p>
+<p>Het input-event zorgt voor realtime updates tijdens het slepen, terwijl change triggert als de waarde is ingesteld.</p>
+<p>In de CSS file wordt nergens een rode kleur opgegeven, waar wordt dan wel de rode kleur van
+het blokje ingesteld?</p>
+<p>De rode kleur wordt in JavaScript ingesteld via colorDemos[0].style.backgroundColor = "red";</p>
+<p>Waarom schrijven we telkens sliders[0] en colorDemos[0] en niet gewoon sliders of
+colorDemos?</p>
+<p>Omdat sliders en colorDemos HTMLCollections zijn, gebruiken we [0] om het eerste element te selecteren.</p>
+<p>Waar vind je de CSS-properties die programmatorisch werden ingesteld, zoals bv. de rode
+	achtergrondkleur van het blokje?</p>
+<p>De CSS-properties die programmatorisch zijn ingesteld, staan in element.style</p>
+<script src="scripts/code.js"></script>
+</body>
+</html> 

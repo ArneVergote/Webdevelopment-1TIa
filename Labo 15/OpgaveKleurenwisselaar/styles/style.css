@@ -1,0 +1,11 @@
+body {
+    display: inline-block;
+}
+button{
+    font-size: 26px;
+    width: 200px;
+    height: 60px;
+    margin: 20px;
+    border-width: 4px;
+    border-style: solid;
+}
