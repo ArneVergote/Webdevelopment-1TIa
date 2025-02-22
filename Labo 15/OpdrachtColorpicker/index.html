@@ -6,23 +6,33 @@
     <title>Opdracht Colorpicker</title>
 </head>
 <body>
-<div class="ColorPicker">
- <p>0</p>
- <input type="range" class="slider" value="50" min="0" max="255" />
- <p>255</p>
-    <p class="red"></p>
- <p>0</p>
- <input type="range" class="slider" value="50" min="0" max="255" />
- <p>255</p>
-    <p class="green"></p>
- <p>0</p>
- <input type="range" class="slider" value="50" min="0" max="255" />
- <p>255</p>
-    <p class="blue"></p>
 <section>
- <div class="colorDemo"></div>
+    <div class="slider-row">
+        <p>0</p>
+        <label>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+        </label>
+        <p>255 </p>
+        <p class="red"></p>
+    </div>
+    <div class="slider-row">
+        <p>0</p>
+        <label>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+        </label>
+        <p>255 </p>
+        <p class="green"></p>
+        <div class="colorDemo"></div>
+    </div>
+    <div class="slider-row">
+        <p>0</p>
+        <label>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+        </label>
+        <p>255 </p>
+        <p class="blue"></p>
+    </div>
 </section>
-</div>
 <script src="scripts/code.js"></script>
 </body>
 </html>
