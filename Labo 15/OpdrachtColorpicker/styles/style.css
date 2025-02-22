@@ -8,13 +8,6 @@ section {
     border: 1px solid black;
     margin-left: 1em;
 }
-.slider{
-    border:1px solid black;
-    border-radius: 5px;
-    margin: 0 0 0 1em;
-    height: 4em;
-    width: 5em;
-}
 .slider-row {
     display: flex;
     align-items: center;
