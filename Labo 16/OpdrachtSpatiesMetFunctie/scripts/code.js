@@ -4,7 +4,7 @@ const setup = () => {
 }
 
 const spaties = () => {
-    const tekstInput = document.getElementById("tekst")
+    const tekstInput = document.getElementById("tekst");
     const spacedText = tekstInput.value.split("").join(" ").replace(/\s+/g, ' ');
     document.getElementById("output").innerHTML = spacedText;
 }
