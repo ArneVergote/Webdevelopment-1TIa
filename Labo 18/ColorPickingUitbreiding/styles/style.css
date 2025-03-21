@@ -1,0 +1,39 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+.colorDemo{
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    margin-left: 1em;
+}
+.slider-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+#savedColors {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.savedColorBox {
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
