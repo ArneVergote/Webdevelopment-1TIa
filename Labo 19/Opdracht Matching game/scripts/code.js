@@ -1,10 +1,11 @@
 let global = {
     AANTAL_HORIZONTAAL: 6,
     AANTAL_VERTICAAL: 3,
-    AANTAL_KAARTEN: 6,
-    kaarten: [],
-    geselecteerdeKaarten: [],
-    gevondenPairs: 0
+    AANTAL_KAARTEN: 6, 
+    AANTAL_GELIJK: 3,
+    KAARTEN: [],
+    GESELECTEERDE_KAARTEN: [],
+    GEVONDEN_PAIRS: 0
 };
 
 const setup = () => {
@@ -12,16 +13,17 @@ const setup = () => {
     container.classList.add("memory-game");
     document.body.appendChild(container);
 
+    // Dynamische grid lay-out
     container.style.display = "grid";
     container.style.gridTemplateColumns = `repeat(${global.AANTAL_HORIZONTAAL}, 200px)`;
-    container.style.gridTemplateRows = `repeat(${global.AANTAL_VERTICAAL}, 280px)`;
-
+    container.style.gridGap = "15px";
+    container.style.justifyContent = "center";
 
     let images = [];
     for (let i = 1; i <= global.AANTAL_KAARTEN; i++) {
-        images.push(`images/kaart${i}.jpg`);
-        images.push(`images/kaart${i}.jpg`);
-        images.push(`images/kaart${i}.jpg`);
+        for (let j = 0; j < global.AANTAL_GELIJK; j++) {
+            images.push(`images/kaart${i}.jpg`);
+        }
     }
 
     shuffleArray(images);
@@ -29,7 +31,6 @@ const setup = () => {
     images.forEach((imgSrc, index) => {
         let kaart = document.createElement("div");
         kaart.classList.add("kaart");
-        kaart.dataset.index = index;
         kaart.dataset.image = imgSrc;
 
         let front = document.createElement("img");
@@ -44,45 +45,43 @@ const setup = () => {
         kaart.addEventListener("click", flipKaart);
         container.appendChild(kaart);
 
-        global.kaarten.push(kaart);
+        global.KAARTEN.push(kaart);
     });
 };
 
 const flipKaart = (event) => {
     let kaart = event.currentTarget;
 
-    if (global.geselecteerdeKaarten.length < 3 && !kaart.classList.contains("flipped")) {
+    if (global.GESELECTEERDE_KAARTEN.length < global.AANTAL_GELIJK && !kaart.classList.contains("flipped")) {
         kaart.classList.add("flipped");
-        global.geselecteerdeKaarten.push(kaart);
+        global.GESELECTEERDE_KAARTEN.push(kaart);
     }
 
-    if (global.geselecteerdeKaarten.length === 3) {
+    if (global.GESELECTEERDE_KAARTEN.length === global.AANTAL_GELIJK) {
         setTimeout(checkMatch, 1000);
     }
 };
 
 const checkMatch = () => {
-    let [kaart1, kaart2, kaart3] = global.geselecteerdeKaarten;
-
-    if (kaart1.dataset.image === kaart2.dataset.image && kaart1.dataset.image === kaart3.dataset.image) {
-        setTimeout(() => {
-            kaart1.style.visibility = "hidden";
-            kaart2.style.visibility = "hidden";
-            kaart3.style.visibility = "hidden";
-            global.gevondenPairs++;
-
-            if (global.gevondenPairs === global.AANTAL_KAARTEN) {
-                alert("Gefeliciteerd! Je hebt gewonnen!");
-            }
-        }, 500);
-    } else {
-        // Terug omdraaien als ze geen match zijn
-        kaart1.classList.remove("flipped");
-        kaart2.classList.remove("flipped");
-        kaart3.classList.remove("flipped");
+    if (global.GESELECTEERDE_KAARTEN.length !== global.AANTAL_GELIJK) {
+        return;
     }
 
-    global.geselecteerdeKaarten = [];
+    let eersteKaart = global.GESELECTEERDE_KAARTEN[0];
+    let isMatch = global.GESELECTEERDE_KAARTEN.every(kaart => kaart.dataset.image === eersteKaart.dataset.image);
+
+    if (isMatch) {
+        global.GESELECTEERDE_KAARTEN.forEach(kaart => kaart.style.visibility = "hidden"); // 🔹 Kaarten blijven op hun plek
+        global.GEVONDEN_PAIRS++;
+
+        if (global.GEVONDEN_PAIRS === global.AANTAL_KAARTEN) {
+            setTimeout(() => alert("Gefeliciteerd! Je hebt gewonnen!"), 500);
+        }
+    } else {
+        global.GESELECTEERDE_KAARTEN.forEach(kaart => kaart.classList.remove("flipped"));
+    }
+
+    global.GESELECTEERDE_KAARTEN = [];
 };
 
 const shuffleArray = (array) => {
