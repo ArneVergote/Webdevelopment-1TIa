@@ -1,0 +1,39 @@
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+.kaart {
+    width: 200px;
+    height: 280px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.kaart .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Start verborgen */
+}
+
+.kaart .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    backface-visibility: hidden;
+}
+
+.kaart.flipped .front {
+    transform: rotateY(0deg); /* Wordt zichtbaar bij klikken */
+}
+
+.kaart.flipped .back {
+    display: none; /* Achterkant verdwijnt */
+}
