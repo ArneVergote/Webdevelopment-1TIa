@@ -13,10 +13,9 @@ const setup = () => {
     container.classList.add("memory-game");
     document.body.appendChild(container);
 
-    // Dynamische grid lay-out
     container.style.display = "grid";
     container.style.gridTemplateColumns = `repeat(${global.AANTAL_HORIZONTAAL}, 200px)`;
-    container.style.gridGap = "15px";
+    container.style.gap = "15px";
     container.style.justifyContent = "center";
 
     let images = [];
