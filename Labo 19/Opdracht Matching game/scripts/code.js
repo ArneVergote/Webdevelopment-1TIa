@@ -59,7 +59,6 @@ const checkMatch = () => {
     let [kaart1, kaart2] = global.geselecteerdeKaarten;
 
     if (kaart1.dataset.image === kaart2.dataset.image) {
-        // Verwijderen als ze een match zijn
         setTimeout(() => {
             kaart1.style.visibility = "hidden";
             kaart2.style.visibility = "hidden";
@@ -78,7 +77,6 @@ const checkMatch = () => {
     global.geselecteerdeKaarten = [];
 };
 
-// Fisher-Yates Shuffle Algorithm
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
