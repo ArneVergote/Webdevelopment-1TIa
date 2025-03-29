@@ -12,6 +12,10 @@ const setup = () => {
     container.classList.add("memory-game");
     document.body.appendChild(container);
 
+    container.style.display = "grid";
+    container.style.gridTemplateColumns = `repeat(${global.AANTAL_HORIZONTAAL}, 200px)`;
+    container.style.gridTemplateRows = `repeat(${global.AANTAL_VERTICAAL}, 280px)`;
+
 
     let images = [];
     for (let i = 1; i <= global.AANTAL_KAARTEN; i++) {
